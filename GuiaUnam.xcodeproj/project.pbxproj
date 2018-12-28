@@ -74,6 +74,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE44277421D6D61700880058 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE44277621D6D62B00880058 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE44277721D6D63F00880058 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EECC06D621D6C5B9003586B6 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		EECC06C821D6C5B9003586B6 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +119,10 @@
 		EECC06D321D6C5B9003586B6 /* GuiaUnam */ = {
 			isa = PBXGroup;
 			children = (
+				CE44277721D6D63F00880058 /* Controllers */,
+				CE44277621D6D62B00880058 /* Models */,
+				CE44277421D6D61700880058 /* Views */,
 				EECC06D421D6C5B9003586B6 /* AppDelegate.swift */,
-				EECC06D621D6C5B9003586B6 /* ViewController.swift */,
 				EECC06D821D6C5B9003586B6 /* Main.storyboard */,
 				EECC06DB21D6C5BA003586B6 /* Assets.xcassets */,
 				EECC06DD21D6C5BA003586B6 /* LaunchScreen.storyboard */,
