@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E775249421D6FB2B0096FA82 /* MuseumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E775249321D6FB2B0096FA82 /* MuseumCell.xib */; };
-		E775249621D6FB430096FA82 /* MuseumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775249521D6FB430096FA82 /* MuseumCell.swift */; };
 		EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06D421D6C5B9003586B6 /* AppDelegate.swift */; };
 		EECC06D721D6C5B9003586B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06D621D6C5B9003586B6 /* ViewController.swift */; };
 		EECC06DA21D6C5B9003586B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECC06D821D6C5B9003586B6 /* Main.storyboard */; };
@@ -16,6 +14,9 @@
 		EECC06DF21D6C5BA003586B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECC06DD21D6C5BA003586B6 /* LaunchScreen.storyboard */; };
 		EECC06EA21D6C5BA003586B6 /* GuiaUnamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06E921D6C5BA003586B6 /* GuiaUnamTests.swift */; };
 		EECC06F521D6C5BA003586B6 /* GuiaUnamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06F421D6C5BA003586B6 /* GuiaUnamUITests.swift */; };
+		EECC070521D7BA01003586B6 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC070321D7BA01003586B6 /* ItemCell.swift */; };
+		EECC070621D7BA01003586B6 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECC070421D7BA01003586B6 /* ItemCell.xib */; };
+		EECC070821D7BBE4003586B6 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC070721D7BBE4003586B6 /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E775249321D6FB2B0096FA82 /* MuseumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MuseumCell.xib; sourceTree = "<group>"; };
-		E775249521D6FB430096FA82 /* MuseumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumCell.swift; sourceTree = "<group>"; };
 		EECC06D121D6C5B9003586B6 /* GuiaUnam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuiaUnam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECC06D421D6C5B9003586B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EECC06D621D6C5B9003586B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +50,9 @@
 		EECC06F021D6C5BA003586B6 /* GuiaUnamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuiaUnamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECC06F421D6C5BA003586B6 /* GuiaUnamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiaUnamUITests.swift; sourceTree = "<group>"; };
 		EECC06F621D6C5BA003586B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EECC070321D7BA01003586B6 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		EECC070421D7BA01003586B6 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		EECC070721D7BBE4003586B6 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				EECC06D621D6C5B9003586B6 /* ViewController.swift */,
+				EECC070321D7BA01003586B6 /* ItemCell.swift */,
+				EECC070421D7BA01003586B6 /* ItemCell.xib */,
+				EECC070721D7BBE4003586B6 /* CollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -89,17 +94,8 @@
 		E775249121D6F9F60096FA82 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E775249321D6FB2B0096FA82 /* MuseumCell.xib */,
-				E775249521D6FB430096FA82 /* MuseumCell.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		E775249221D6FA030096FA82 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		EECC06C821D6C5B9003586B6 = {
@@ -125,10 +121,10 @@
 		EECC06D321D6C5B9003586B6 /* GuiaUnam */ = {
 			isa = PBXGroup;
 			children = (
+				EECC070221D7B9E0003586B6 /* Views */,
 				CE44277721D6D63F00880058 /* Controllers */,
-				EECC06D421D6C5B9003586B6 /* AppDelegate.swift */,
 				E775249121D6F9F60096FA82 /* Models */,
-				E775249221D6FA030096FA82 /* Views */,
+				EECC06D421D6C5B9003586B6 /* AppDelegate.swift */,
 				EECC06DB21D6C5BA003586B6 /* Assets.xcassets */,
 				EECC06DD21D6C5BA003586B6 /* LaunchScreen.storyboard */,
 				EECC06D821D6C5B9003586B6 /* Main.storyboard */,
@@ -153,6 +149,13 @@
 				EECC06F621D6C5BA003586B6 /* Info.plist */,
 			);
 			path = GuiaUnamUITests;
+			sourceTree = "<group>";
+		};
+		EECC070221D7B9E0003586B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,10 +262,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EECC070621D7BA01003586B6 /* ItemCell.xib in Resources */,
 				EECC06DF21D6C5BA003586B6 /* LaunchScreen.storyboard in Resources */,
 				EECC06DC21D6C5BA003586B6 /* Assets.xcassets in Resources */,
 				EECC06DA21D6C5B9003586B6 /* Main.storyboard in Resources */,
-				E775249421D6FB2B0096FA82 /* MuseumCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,9 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E775249621D6FB430096FA82 /* MuseumCell.swift in Sources */,
+				EECC070821D7BBE4003586B6 /* CollectionViewController.swift in Sources */,
 				EECC06D721D6C5B9003586B6 /* ViewController.swift in Sources */,
 				EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */,
+				EECC070521D7BA01003586B6 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
