@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE7920A921E0171F00D96FF4 /* MuseoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7920A821E0171F00D96FF4 /* MuseoData.swift */; };
 		EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06D421D6C5B9003586B6 /* AppDelegate.swift */; };
 		EECC06D721D6C5B9003586B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06D621D6C5B9003586B6 /* ViewController.swift */; };
 		EECC06DA21D6C5B9003586B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECC06D821D6C5B9003586B6 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE7920A821E0171F00D96FF4 /* MuseoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseoData.swift; sourceTree = "<group>"; };
 		EECC06D121D6C5B9003586B6 /* GuiaUnam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuiaUnam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECC06D421D6C5B9003586B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EECC06D621D6C5B9003586B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,9 +93,10 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		E775249121D6F9F60096FA82 /* Models */ = {
+		CE7920AA21E0173600D96FF4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE7920A821E0171F00D96FF4 /* MuseoData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,9 +124,9 @@
 		EECC06D321D6C5B9003586B6 /* GuiaUnam */ = {
 			isa = PBXGroup;
 			children = (
+				CE7920AA21E0173600D96FF4 /* Models */,
 				EECC070221D7B9E0003586B6 /* Views */,
 				CE44277721D6D63F00880058 /* Controllers */,
-				E775249121D6F9F60096FA82 /* Models */,
 				EECC06D421D6C5B9003586B6 /* AppDelegate.swift */,
 				EECC06DB21D6C5BA003586B6 /* Assets.xcassets */,
 				EECC06DD21D6C5BA003586B6 /* LaunchScreen.storyboard */,
@@ -292,6 +295,7 @@
 			files = (
 				EECC070821D7BBE4003586B6 /* CollectionViewController.swift in Sources */,
 				EECC06D721D6C5B9003586B6 /* ViewController.swift in Sources */,
+				CE7920A921E0171F00D96FF4 /* MuseoData.swift in Sources */,
 				EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */,
 				EECC070521D7BA01003586B6 /* ItemCell.swift in Sources */,
 			);
