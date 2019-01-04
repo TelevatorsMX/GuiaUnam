@@ -11,13 +11,16 @@ import UIKit
 class ItemCell: UICollectionViewCell {
 
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var imageCell: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func setData(text: String){
+    func setData(text: String, image: UIImage){
         self.textLabel.text = text
+        self.imageCell.image = image
     }
+    
 }

@@ -14,7 +14,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
-    
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
     

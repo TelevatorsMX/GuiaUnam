@@ -14,6 +14,7 @@ class CollectionViewController: UIViewController{
     @IBOutlet weak var collectionView: UICollectionView!
     
     let dataArray = ["AAA","BBB","CCC","DDD","EEE","FFF","GGG","HHH","III"]
+    let imageMuac: UIImage = UIImage(named: "muac")!
     var estimateWidth = 160.0
     var cellMarginSize = 16.0
     
@@ -56,7 +57,10 @@ extension CollectionViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
-        cell.setData(text: self.dataArray[indexPath.row])
+        cell.setData(text: self.dataArray[indexPath.row], image: imageMuac
+        )
+        //cell.setData(text: self.dataArray[indexPath.row], )
+       
         
         return cell
     }
