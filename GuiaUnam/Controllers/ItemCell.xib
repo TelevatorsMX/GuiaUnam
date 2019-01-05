@@ -25,6 +25,10 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xmn-MG-Yp9">
+                        <rect key="frame" x="0.0" y="0.0" width="184" height="125"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -38,6 +42,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="184" height="201"/>
             <connections>
+                <outlet property="imageCell" destination="Xmn-MG-Yp9" id="aV0-TJ-I92"/>
                 <outlet property="textLabel" destination="oGc-7M-hWC" id="isQ-s0-gy6"/>
             </connections>
             <point key="canvasLocation" x="156.80000000000001" y="155.17241379310346"/>
