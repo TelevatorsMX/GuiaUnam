@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class CollectionViewController: UIViewController{
-    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     let dataArray = ["AAA","BBB","CCC","DDD","EEE","FFF","GGG","HHH","III"]
-    let imageMuac: UIImage = UIImage(named: "muac")!
+    var museums = [Museum]()
     var estimateWidth = 160.0
     var cellMarginSize = 16.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,9 @@ class CollectionViewController: UIViewController{
         
         self.collectionView.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
         
-        self.setupGridView()
+        setupGridView()
+    
+        downloadMuseums()
     }
     
     override func viewDidLayoutSubviews() {
@@ -45,28 +48,52 @@ class CollectionViewController: UIViewController{
         flow.minimumInteritemSpacing = CGFloat(self.cellMarginSize)
         flow.minimumLineSpacing = CGFloat(self.cellMarginSize)
     }
+    
+    func downloadMuseums(){
+        
+        let ref = Database.database().reference()
+        ref.child("museos").observe(.childAdded) { (snapshot) in
+            
+            if let dict = snapshot.value as? [String:Any]{
+                
+                let museumText = dict["nombre"] as! String
+                let urlText = dict["url"] as! String
+                let museum = Museum(museumText: museumText, urlText: urlText)
+                self.museums.append(museum)
+                print(self.museums)
+                self.collectionView.reloadData()
+            }
+        }
+    }
 }
 
-extension CollectionViewController: UICollectionViewDataSource{
+extension CollectionViewController: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let museumSelected = museums[indexPath.row]
+        print("----------")
+        print(museumSelected)
+    }
+}
+
+extension CollectionViewController: UICollectionViewDataSource{ //Data Source
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return self.dataArray.count
+        return self.museums.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
-        cell.setData(text: self.dataArray[indexPath.row], image: imageMuac
-        )
-        //cell.setData(text: self.dataArray[indexPath.row], )
-       
+        cell.setData(text: self.museums[indexPath.row].museum)
         
         return cell
     }
+    
 }
 
-extension CollectionViewController: UICollectionViewDelegateFlowLayout{
+extension CollectionViewController: UICollectionViewDelegateFlowLayout{ //Grid
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
