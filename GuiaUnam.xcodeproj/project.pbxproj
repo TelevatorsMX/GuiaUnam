@@ -10,8 +10,7 @@
 		5D386A16A6ECBCFB46650CD2 /* Pods_GuiaUnamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B955E9E19C8B5D213F4C07FE /* Pods_GuiaUnamUITests.framework */; };
 		5EC21D7156527A8533EFC6DA /* Pods_GuiaUnam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A84097D317D591455A4AA43A /* Pods_GuiaUnam.framework */; };
 		EE4ACEE821E66C17002651C0 /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4ACEE721E66C17002651C0 /* Museum.swift */; };
-		EE4ACEED21E83E74002651C0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4ACEEB21E83E74002651C0 /* InfoViewController.swift */; };
-		EE4ACEEE21E83E74002651C0 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4ACEEC21E83E74002651C0 /* InfoViewController.xib */; };
+		EE4ACEF021E94B6D002651C0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */; };
 		EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06D421D6C5B9003586B6 /* AppDelegate.swift */; };
 		EECC06D721D6C5B9003586B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06D621D6C5B9003586B6 /* ViewController.swift */; };
 		EECC06DA21D6C5B9003586B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECC06D821D6C5B9003586B6 /* Main.storyboard */; };
@@ -53,8 +52,7 @@
 		BECEA7E612D3FD1027FD50DF /* Pods_GuiaUnamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuiaUnamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7F081D2EC16ED303B9AEB67 /* Pods-GuiaUnamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuiaUnamUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuiaUnamUITests/Pods-GuiaUnamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE4ACEE721E66C17002651C0 /* Museum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
-		EE4ACEEB21E83E74002651C0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		EE4ACEEC21E83E74002651C0 /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		EECC06D121D6C5B9003586B6 /* GuiaUnam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuiaUnam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECC06D421D6C5B9003586B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EECC06D621D6C5B9003586B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +130,7 @@
 				EECC06D621D6C5B9003586B6 /* ViewController.swift */,
 				EECC070321D7BA01003586B6 /* ItemCell.swift */,
 				EECC070721D7BBE4003586B6 /* CollectionViewController.swift */,
-				EE4ACEEB21E83E74002651C0 /* InfoViewController.swift */,
+				EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,8 +171,8 @@
 				CE7920AA21E0173600D96FF4 /* Models */,
 				EECC070221D7B9E0003586B6 /* Views */,
 				CE44277721D6D63F00880058 /* Controllers */,
-				EECC06D421D6C5B9003586B6 /* AppDelegate.swift */,
 				EECC06DB21D6C5BA003586B6 /* Assets.xcassets */,
+				EECC06D421D6C5B9003586B6 /* AppDelegate.swift */,
 				EECC06DD21D6C5BA003586B6 /* LaunchScreen.storyboard */,
 				EECC06D821D6C5B9003586B6 /* Main.storyboard */,
 				EEE6DF0221E5348100F52CF7 /* GoogleService-Info.plist */,
@@ -205,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				EECC070421D7BA01003586B6 /* ItemCell.xib */,
-				EE4ACEEC21E83E74002651C0 /* InfoViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -322,7 +319,6 @@
 				EECC06DF21D6C5BA003586B6 /* LaunchScreen.storyboard in Resources */,
 				EEE6DF0321E5348100F52CF7 /* GoogleService-Info.plist in Resources */,
 				EECC06DC21D6C5BA003586B6 /* Assets.xcassets in Resources */,
-				EE4ACEEE21E83E74002651C0 /* InfoViewController.xib in Resources */,
 				EECC06DA21D6C5B9003586B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,7 +443,7 @@
 				EECC06D721D6C5B9003586B6 /* ViewController.swift in Sources */,
 				EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */,
 				EECC070521D7BA01003586B6 /* ItemCell.swift in Sources */,
-				EE4ACEED21E83E74002651C0 /* InfoViewController.swift in Sources */,
+				EE4ACEF021E94B6D002651C0 /* InfoViewController.swift in Sources */,
 				EE4ACEE821E66C17002651C0 /* Museum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

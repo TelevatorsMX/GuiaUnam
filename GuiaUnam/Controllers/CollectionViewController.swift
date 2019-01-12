@@ -13,7 +13,6 @@ class CollectionViewController: UIViewController{
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let dataArray = ["AAA","BBB","CCC","DDD","EEE","FFF","GGG","HHH","III"]
     var museums = [Museum]()
     var estimateWidth = 160.0
     var cellMarginSize = 16.0
@@ -68,11 +67,20 @@ class CollectionViewController: UIViewController{
 }
 
 extension CollectionViewController: UICollectionViewDelegate{
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let museumSelected = museums[indexPath.row]
-        print("----------")
-        print(museumSelected)
+        self.performSegue(withIdentifier: "DetailSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPathSelected = collectionView.indexPathsForSelectedItems?.first else { return }
+        if segue.identifier == "DetailSegue"{
+            let detailViewData = segue.destination as? InfoViewController
+            let museumSelected = museums[indexPathSelected.row]
+            detailViewData?.name = museumSelected.museum
+            detailViewData?.url = museumSelected.url
+        }
     }
 }
 

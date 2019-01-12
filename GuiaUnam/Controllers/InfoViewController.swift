@@ -2,7 +2,7 @@
 //  InfoViewController.swift
 //  GuiaUnam
 //
-//  Created by Miguel Vicario on 1/10/19.
+//  Created by Miguel Vicario on 1/11/19.
 //  Copyright © 2019 Miguel Vicario. All rights reserved.
 //
 
@@ -10,25 +10,25 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var museumImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var urlLabel: UILabel!
+    var name: String!
+    var url: String!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setData()
         // Do any additional setup after loading the view.
     }
     
-    func setData(nametext: String, urlText: String, image: UIImage){
-        self.nameLabel.text = nametext
-        self.urlLabel.text = urlText
-        self.imageView.image = image
-        
+    func setData(){
+        self.nameLabel.text = name
+        self.urlLabel.text = url
     }
     
-    
-
 
     /*
     // MARK: - Navigation
