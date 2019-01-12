@@ -18,4 +18,5 @@ struct Museum{
         museum = museumText
         url = urlText
     }
+    
 }
