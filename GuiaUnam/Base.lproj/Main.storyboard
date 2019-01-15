@@ -83,7 +83,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lAj-Qd-NqD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Museos" id="qTd-bU-ObF"/>
+                    <navigationItem key="navigationItem" title="Museos" id="qTd-bU-ObF">
+                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="2ay-ee-aTJ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="EiZ-Wa-iyW" id="mB7-8Z-JNx"/>
                     </connections>
