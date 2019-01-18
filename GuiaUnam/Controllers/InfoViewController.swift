@@ -13,8 +13,10 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var museumImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var detailText: UITextView!
     var name: String!
     var url: String!
+    var detail: String!
     
     
     override func viewDidLoad() {
@@ -27,6 +29,7 @@ class InfoViewController: UIViewController {
     func setData(){
         self.nameLabel.text = name
         self.urlLabel.text = url
+        self.detailText.text = detail
     }
     
 
