@@ -12,11 +12,13 @@ struct Museum{
     
     var museum: String
     var url: String
+    var description: String
     
-    init(museumText: String, urlText: String) {
+    init(museumText: String, urlText: String, detalles: String) {
         
         museum = museumText
         url = urlText
+        description = detalles
     }
     
 }

@@ -57,7 +57,8 @@ class CollectionViewController: UIViewController{
                 
                 let museumText = dict["nombre"] as! String
                 let urlText = dict["url"] as! String
-                let museum = Museum(museumText: museumText, urlText: urlText)
+                let detalles = dict["detalles"] as! String
+                let museum = Museum(museumText: museumText, urlText: urlText, detalles: detalles)
                 self.museums.append(museum)
                 print(self.museums)
                 self.collectionView.reloadData()
@@ -80,6 +81,7 @@ extension CollectionViewController: UICollectionViewDelegate{
             let museumSelected = museums[indexPathSelected.row]
             detailViewData?.name = museumSelected.museum
             detailViewData?.url = museumSelected.url
+            detailViewData?.detail = museumSelected.description
         }
     }
 }
