@@ -14,6 +14,7 @@ class CollectionViewController: UIViewController{
     @IBOutlet weak var collectionView: UICollectionView!
     
     var museums = [Museum]()
+
     var estimateWidth = 160.0
     var cellMarginSize = 16.0
     
@@ -58,9 +59,10 @@ class CollectionViewController: UIViewController{
                 let museumText = dict["nombre"] as! String
                 let urlText = dict["url"] as! String
                 let detalles = dict["detalles"] as! String
-                let museum = Museum(museumText: museumText, urlText: urlText, detalles: detalles)
+                let image = dict["img"] as! String
+                let museum = Museum(museumText: museumText, urlText: urlText, detalles: detalles, imageURL: image)
                 self.museums.append(museum)
-                print(self.museums)
+                //print(self.museums)
                 self.collectionView.reloadData()
             }
         }
@@ -96,7 +98,7 @@ extension CollectionViewController: UICollectionViewDataSource{ //Data Source
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
-        cell.setData(text: self.museums[indexPath.row].museum)
+        cell.setData(image: self.museums[indexPath.row].image)
         
         return cell
     }

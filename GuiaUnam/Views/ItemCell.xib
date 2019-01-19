@@ -19,26 +19,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="184" height="201"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGc-7M-hWC">
-                        <rect key="frame" x="20" y="125" width="144" height="35"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gOM-7V-3gG">
+                        <rect key="frame" x="0.0" y="0.0" width="184" height="201"/>
+                    </imageView>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="oGc-7M-hWC" secondAttribute="trailing" constant="20" id="KSt-Uv-B7j"/>
-                <constraint firstItem="oGc-7M-hWC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="125" id="Kp5-Rn-32J"/>
-                <constraint firstItem="oGc-7M-hWC" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="k6q-UF-fbz"/>
-                <constraint firstAttribute="bottom" secondItem="oGc-7M-hWC" secondAttribute="bottom" constant="41" id="qT2-se-9NR"/>
-                <constraint firstItem="oGc-7M-hWC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="yK5-Z7-ed1"/>
+                <constraint firstAttribute="trailing" secondItem="gOM-7V-3gG" secondAttribute="trailing" id="4ip-9l-yYX"/>
+                <constraint firstAttribute="bottom" secondItem="gOM-7V-3gG" secondAttribute="bottom" id="SFJ-M2-5BI"/>
+                <constraint firstItem="gOM-7V-3gG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="t6G-KR-Qb1"/>
+                <constraint firstItem="gOM-7V-3gG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="z8E-7g-7n2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="184" height="201"/>
             <connections>
-                <outlet property="textLabel" destination="oGc-7M-hWC" id="isQ-s0-gy6"/>
+                <outlet property="imageCell" destination="gOM-7V-3gG" id="qGO-YX-iz5"/>
             </connections>
             <point key="canvasLocation" x="156.80000000000001" y="155.17241379310346"/>
         </collectionViewCell>
