@@ -11,6 +11,8 @@
 		5EC21D7156527A8533EFC6DA /* Pods_GuiaUnam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A84097D317D591455A4AA43A /* Pods_GuiaUnam.framework */; };
 		EE4ACEE821E66C17002651C0 /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4ACEE721E66C17002651C0 /* Museum.swift */; };
 		EE4ACEF021E94B6D002651C0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */; };
+		EE8EA12121F2949F007DD356 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8EA12021F2949E007DD356 /* ItemCell.xib */; };
+		EE8EA12421F2988C007DD356 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8EA12321F2988C007DD356 /* ImageService.swift */; };
 		EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06D421D6C5B9003586B6 /* AppDelegate.swift */; };
 		EECC06D721D6C5B9003586B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06D621D6C5B9003586B6 /* ViewController.swift */; };
 		EECC06DA21D6C5B9003586B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECC06D821D6C5B9003586B6 /* Main.storyboard */; };
@@ -19,7 +21,6 @@
 		EECC06EA21D6C5BA003586B6 /* GuiaUnamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06E921D6C5BA003586B6 /* GuiaUnamTests.swift */; };
 		EECC06F521D6C5BA003586B6 /* GuiaUnamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06F421D6C5BA003586B6 /* GuiaUnamUITests.swift */; };
 		EECC070521D7BA01003586B6 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC070321D7BA01003586B6 /* ItemCell.swift */; };
-		EECC070621D7BA01003586B6 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECC070421D7BA01003586B6 /* ItemCell.xib */; };
 		EECC070821D7BBE4003586B6 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC070721D7BBE4003586B6 /* CollectionViewController.swift */; };
 		EEE6DF0321E5348100F52CF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE6DF0221E5348100F52CF7 /* GoogleService-Info.plist */; };
 		EFBE54A82BB2A5024F14FF9A /* Pods_GuiaUnamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECEA7E612D3FD1027FD50DF /* Pods_GuiaUnamTests.framework */; };
@@ -53,6 +54,8 @@
 		C7F081D2EC16ED303B9AEB67 /* Pods-GuiaUnamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuiaUnamUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuiaUnamUITests/Pods-GuiaUnamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE4ACEE721E66C17002651C0 /* Museum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
 		EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		EE8EA12021F2949E007DD356 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		EE8EA12321F2988C007DD356 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		EECC06D121D6C5B9003586B6 /* GuiaUnam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuiaUnam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECC06D421D6C5B9003586B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EECC06D621D6C5B9003586B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +70,6 @@
 		EECC06F421D6C5BA003586B6 /* GuiaUnamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiaUnamUITests.swift; sourceTree = "<group>"; };
 		EECC06F621D6C5BA003586B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EECC070321D7BA01003586B6 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
-		EECC070421D7BA01003586B6 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		EECC070721D7BBE4003586B6 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		EEE6DF0221E5348100F52CF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F920C3A1E817C03368D6686F /* Pods-GuiaUnamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuiaUnamUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuiaUnamUITests/Pods-GuiaUnamUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		EE8EA12221F2982F007DD356 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EE8EA12321F2988C007DD356 /* ImageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EECC06C821D6C5B9003586B6 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +178,7 @@
 		EECC06D321D6C5B9003586B6 /* GuiaUnam */ = {
 			isa = PBXGroup;
 			children = (
+				EE8EA12221F2982F007DD356 /* Services */,
 				CE7920AA21E0173600D96FF4 /* Models */,
 				EECC070221D7B9E0003586B6 /* Views */,
 				CE44277721D6D63F00880058 /* Controllers */,
@@ -202,7 +213,7 @@
 		EECC070221D7B9E0003586B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EECC070421D7BA01003586B6 /* ItemCell.xib */,
+				EE8EA12021F2949E007DD356 /* ItemCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,9 +326,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EECC070621D7BA01003586B6 /* ItemCell.xib in Resources */,
 				EECC06DF21D6C5BA003586B6 /* LaunchScreen.storyboard in Resources */,
 				EEE6DF0321E5348100F52CF7 /* GoogleService-Info.plist in Resources */,
+				EE8EA12121F2949F007DD356 /* ItemCell.xib in Resources */,
 				EECC06DC21D6C5BA003586B6 /* Assets.xcassets in Resources */,
 				EECC06DA21D6C5B9003586B6 /* Main.storyboard in Resources */,
 			);
@@ -445,6 +456,7 @@
 				EECC070521D7BA01003586B6 /* ItemCell.swift in Sources */,
 				EE4ACEF021E94B6D002651C0 /* InfoViewController.swift in Sources */,
 				EE4ACEE821E66C17002651C0 /* Museum.swift in Sources */,
+				EE8EA12421F2988C007DD356 /* ImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
