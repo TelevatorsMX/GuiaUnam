@@ -7,27 +7,30 @@ class ContainerViewController: UIViewController {
         case leftPanelExpanded
         case rightPanelExpanded
     }
-    var centerNavigationController: UINavigationController!
-    var centerViewController: CenterViewController!
+    var collectionNavigationController: UINavigationController!
+    var collectionViewController: CollectionViewController!
     
     var currentState: SlideOutState = .bothCollapsed
     var leftViewController: SidePanelViewController?
     let centerPanelExpandedOffset: CGFloat = 60
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        centerViewController = UIStoryboard.centerViewController()
-        centerViewController.delegate = self
+        collectionViewController = UIStoryboard.collectionViewController()
+        collectionViewController.delegate = self as CollectionViewControllerDelegate
         
-        centerNavigationController = UINavigationController(rootViewController: centerViewController)
+        collectionNavigationController = UINavigationController(rootViewController: collectionViewController)
         
-        view.addSubview(centerNavigationController.view)
-        addChild(centerNavigationController)
-        centerNavigationController.didMove(toParent: self)
+        view.addSubview(collectionNavigationController.view)
+        addChild(collectionNavigationController)
+        collectionNavigationController.didMove(toParent: self)
     }
 }
 
-extension ContainerViewController: CenterViewControllerDelegate {
+extension ContainerViewController: CollectionViewControllerDelegate {
     func toggleLeftPanel() {
         let notAlreadyExpanded = (currentState != .leftPanelExpanded)
         
@@ -66,7 +69,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
         if shouldExpand {
             currentState = .leftPanelExpanded
             animateCenterPanelXPosition(
-                targetPosition: centerNavigationController.view.frame.width - centerPanelExpandedOffset)
+                targetPosition: collectionNavigationController.view.frame.width - centerPanelExpandedOffset)
             
         } else {
             animateCenterPanelXPosition(targetPosition: 0) { finished in
@@ -86,7 +89,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
                        usingSpringWithDamping: 0.8,
                        initialSpringVelocity: 0,
                        options: .curveEaseInOut, animations: {
-                        self.centerNavigationController.view.frame.origin.x = targetPosition
+                        self.collectionNavigationController.view.frame.origin.x = targetPosition
         }, completion: completion)
     }
     
@@ -103,11 +106,7 @@ private extension UIStoryboard {
         return mainStoryboard().instantiateViewController(withIdentifier: "LeftViewController") as? SidePanelViewController
     }
     
-    static func rightViewController() -> SidePanelViewController? {
-        return mainStoryboard().instantiateViewController(withIdentifier: "RightViewController") as? SidePanelViewController
-    }
-    
-    static func centerViewController() -> CenterViewController? {
-        return mainStoryboard().instantiateViewController(withIdentifier: "CenterViewController") as? CenterViewController
+    static func collectionViewController() -> CollectionViewController? {
+        return mainStoryboard().instantiateViewController(withIdentifier: "CollectionViewController") as? CollectionViewController
     }
 }

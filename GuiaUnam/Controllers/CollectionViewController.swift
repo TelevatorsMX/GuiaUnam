@@ -11,6 +11,15 @@ import FirebaseDatabase
 
 class CollectionViewController: UIViewController{
     
+    //////////////////////////////////Menú lateral///////////////////////////////////
+    var delegate: CollectionViewControllerDelegate?
+    
+    // MARK: Button actions
+    @IBAction func buttonMenuTapped(_ sender: Any) {
+        delegate?.toggleLeftPanel?()
+    }
+    ////////////////////////////////////////////////////////////////////////////////
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var museums = [Museum]()
@@ -24,6 +33,9 @@ class CollectionViewController: UIViewController{
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        
+        
+        
         
         self.collectionView.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
         

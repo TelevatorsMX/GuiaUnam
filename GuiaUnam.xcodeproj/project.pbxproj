@@ -12,8 +12,7 @@
 		CE613AB921ED88BE0066E0F1 /* MenuElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE613AB821ED88BE0066E0F1 /* MenuElement.swift */; };
 		CE613ABB21ED94F50066E0F1 /* MenuElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE613ABA21ED94F50066E0F1 /* MenuElementCell.swift */; };
 		CE6DDFA321EC49380060D018 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DDFA221EC49380060D018 /* ContainerViewController.swift */; };
-		CE6DDFA521EC497E0060D018 /* CenterViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DDFA421EC497E0060D018 /* CenterViewControllerDelegate.swift */; };
-		CE6DDFA721EC4AF50060D018 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DDFA621EC4AF50060D018 /* CenterViewController.swift */; };
+		CE6DDFA521EC497E0060D018 /* CollectionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DDFA421EC497E0060D018 /* CollectionViewControllerDelegate.swift */; };
 		CE6DDFA921EC4C690060D018 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DDFA821EC4C690060D018 /* SidePanelViewController.swift */; };
 		CE6DDFAB21EC4C9D0060D018 /* SidePanelViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DDFAA21EC4C9D0060D018 /* SidePanelViewControllerDelegate.swift */; };
 		EE4ACEE821E66C17002651C0 /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4ACEE721E66C17002651C0 /* Museum.swift */; };
@@ -62,8 +61,7 @@
 		CE613AB821ED88BE0066E0F1 /* MenuElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuElement.swift; sourceTree = "<group>"; };
 		CE613ABA21ED94F50066E0F1 /* MenuElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuElementCell.swift; sourceTree = "<group>"; };
 		CE6DDFA221EC49380060D018 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		CE6DDFA421EC497E0060D018 /* CenterViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewControllerDelegate.swift; sourceTree = "<group>"; };
-		CE6DDFA621EC4AF50060D018 /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
+		CE6DDFA421EC497E0060D018 /* CollectionViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerDelegate.swift; sourceTree = "<group>"; };
 		CE6DDFA821EC4C690060D018 /* SidePanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
 		CE6DDFAA21EC4C9D0060D018 /* SidePanelViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelViewControllerDelegate.swift; sourceTree = "<group>"; };
 		EE4ACEE721E66C17002651C0 /* Museum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
@@ -147,9 +145,8 @@
 				EECC070721D7BBE4003586B6 /* CollectionViewController.swift */,
 				CE6DDFA221EC49380060D018 /* ContainerViewController.swift */,
 				CE6DDFA821EC4C690060D018 /* SidePanelViewController.swift */,
-				CE6DDFA421EC497E0060D018 /* CenterViewControllerDelegate.swift */,
+				CE6DDFA421EC497E0060D018 /* CollectionViewControllerDelegate.swift */,
 				EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */,
-				CE6DDFA621EC4AF50060D018 /* CenterViewController.swift */,
 				CE6DDFAA21EC4C9D0060D018 /* SidePanelViewControllerDelegate.swift */,
 			);
 			path = Controllers;
@@ -476,12 +473,11 @@
 				EECC06D721D6C5B9003586B6 /* ViewController.swift in Sources */,
 				CE6DDFA921EC4C690060D018 /* SidePanelViewController.swift in Sources */,
 				CE6DDFA321EC49380060D018 /* ContainerViewController.swift in Sources */,
-				CE6DDFA721EC4AF50060D018 /* CenterViewController.swift in Sources */,
 				EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */,
 				CE613AB921ED88BE0066E0F1 /* MenuElement.swift in Sources */,
 				CE613ABB21ED94F50066E0F1 /* MenuElementCell.swift in Sources */,
 				EECC070521D7BA01003586B6 /* ItemCell.swift in Sources */,
-				CE6DDFA521EC497E0060D018 /* CenterViewControllerDelegate.swift in Sources */,
+				CE6DDFA521EC497E0060D018 /* CollectionViewControllerDelegate.swift in Sources */,
 				EE4ACEF021E94B6D002651C0 /* InfoViewController.swift in Sources */,
 				EE4ACEE821E66C17002651C0 /* Museum.swift in Sources */,
 				EE8EA12421F2988C007DD356 /* ImageService.swift in Sources */,

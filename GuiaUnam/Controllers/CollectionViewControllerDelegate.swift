@@ -1,8 +1,7 @@
 import UIKit
 
 @objc
-protocol CenterViewControllerDelegate {
+protocol CollectionViewControllerDelegate {
     @objc optional func toggleLeftPanel()
-    @objc optional func toggleRightPanel()
     @objc optional func collapseSidePanels()
 }
