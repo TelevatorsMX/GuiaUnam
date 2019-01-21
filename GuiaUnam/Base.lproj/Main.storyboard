@@ -45,7 +45,7 @@
         <!--Museos-->
         <scene sceneID="XrG-9H-f2w">
             <objects>
-                <viewController id="TVP-Ce-GzB" customClass="CollectionViewController" customModule="GuiaUnam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CollectionViewController" id="TVP-Ce-GzB" customClass="CollectionViewController" customModule="GuiaUnam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JY3-AO-dIm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,8 +161,7 @@
         <!--Side Panel View Controller-->
         <scene sceneID="7Jr-q5-plI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OpT-GA-VI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Pet-Jk-ARY" customClass="SidePanelViewController" customModule="GuiaUnam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeftViewController" id="Pet-Jk-ARY" customClass="SidePanelViewController" customModule="GuiaUnam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hhX-0Q-YCR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +171,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="81" id="4Eu-gB-xng" customClass="MenuElementCell" customModule="GuiaUnam" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuElementCell" rowHeight="81" id="4Eu-gB-xng" customClass="MenuElementCell" customModule="GuiaUnam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Eu-gB-xng" id="udT-aP-je7">
@@ -205,17 +204,25 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="descriptionMenuElementLabel" destination="hZF-mh-mjh" id="eTN-ex-xGv"/>
-                                            <outlet property="menuElementNameLabel" destination="wHm-Zk-fsN" id="WkM-CP-GPN"/>
+                                            <outlet property="descriptionMenuElementLabel" destination="hZF-mh-mjh" id="d1X-ef-YMH"/>
+                                            <outlet property="menuElementNameLabel" destination="wHm-Zk-fsN" id="vAM-1E-RoB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pet-Jk-ARY" id="qm5-hu-PQk"/>
+                                    <outlet property="delegate" destination="Pet-Jk-ARY" id="Abk-Gz-8Yx"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SbF-R7-nkq"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="EAf-UF-RNL" id="Nsz-AG-eBg"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OpT-GA-VI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-266.39999999999998" y="-719.19040479760122"/>
         </scene>

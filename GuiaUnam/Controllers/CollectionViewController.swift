@@ -28,6 +28,18 @@ class CollectionViewController: UIViewController{
     let estimateWidth = 160.0
     let cellMarginSize = 16.0
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+
+        self.collectionView.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
+
+         setupGridView()
+
+         downloadMuseums()
+  }
     
     
     override func viewDidLayoutSubviews() {
