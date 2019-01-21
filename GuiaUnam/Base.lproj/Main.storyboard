@@ -110,23 +110,20 @@
                                 <rect key="frame" x="16" y="64" width="343" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NombreMuseo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpS-SW-b6N">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NombreMuseo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpS-SW-b6N">
                                 <rect key="frame" x="16" y="248" width="351" height="31.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uns-0I-xjV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uns-0I-xjV">
                                 <rect key="frame" x="16" y="287" width="351" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qXW-fP-oLO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qXW-fP-oLO">
                                 <rect key="frame" x="16" y="316" width="343" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -135,6 +132,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration" identifier="InfoView"/>
+                        <constraints>
+                            <constraint firstItem="mpS-SW-b6N" firstAttribute="top" secondItem="xPF-wF-pJC" secondAttribute="top" constant="184" id="3qo-nt-NGM"/>
+                            <constraint firstItem="xPF-wF-pJC" firstAttribute="bottom" secondItem="qXW-fP-oLO" secondAttribute="bottom" constant="200" id="6jn-bs-AXE"/>
+                            <constraint firstItem="qXW-fP-oLO" firstAttribute="top" secondItem="uns-0I-xjV" secondAttribute="bottom" constant="8" id="CT3-yI-Tqr"/>
+                            <constraint firstItem="qXW-fP-oLO" firstAttribute="leading" secondItem="xPF-wF-pJC" secondAttribute="leading" constant="16" id="D0z-zh-hbR"/>
+                            <constraint firstItem="xPF-wF-pJC" firstAttribute="trailing" secondItem="qXW-fP-oLO" secondAttribute="trailing" constant="16" id="Gaz-f0-DX1"/>
+                            <constraint firstItem="uns-0I-xjV" firstAttribute="top" secondItem="mpS-SW-b6N" secondAttribute="bottom" constant="7.5" id="JEO-Gz-mjL"/>
+                            <constraint firstItem="mpS-SW-b6N" firstAttribute="leading" secondItem="xPF-wF-pJC" secondAttribute="leading" constant="16" id="MB4-dd-JLr"/>
+                            <constraint firstItem="xPF-wF-pJC" firstAttribute="trailing" secondItem="uns-0I-xjV" secondAttribute="trailing" constant="8" id="SDl-f2-5jg"/>
+                            <constraint firstItem="xPF-wF-pJC" firstAttribute="trailing" secondItem="mpS-SW-b6N" secondAttribute="trailing" constant="8" id="iNd-iL-AaR"/>
+                            <constraint firstItem="uns-0I-xjV" firstAttribute="leading" secondItem="xPF-wF-pJC" secondAttribute="leading" constant="16" id="snV-hw-MM5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xPF-wF-pJC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Info" largeTitleDisplayMode="never" id="3jH-hf-xwD"/>
@@ -187,8 +196,11 @@
                                                 <constraint firstItem="wHm-Zk-fsN" firstAttribute="top" secondItem="udT-aP-je7" secondAttribute="top" id="Bsp-Wy-Rgj"/>
                                                 <constraint firstItem="hZF-mh-mjh" firstAttribute="top" secondItem="udT-aP-je7" secondAttribute="topMargin" id="EDI-g1-htq"/>
                                                 <constraint firstAttribute="bottom" secondItem="wHm-Zk-fsN" secondAttribute="bottom" constant="36.5" id="Oej-7g-5aO"/>
+                                                <constraint firstItem="hZF-mh-mjh" firstAttribute="leading" secondItem="udT-aP-je7" secondAttribute="leading" constant="190" id="Pim-69-EaO"/>
                                                 <constraint firstItem="wHm-Zk-fsN" firstAttribute="leading" secondItem="udT-aP-je7" secondAttribute="leading" constant="15" id="YPK-Rg-Abf"/>
+                                                <constraint firstAttribute="trailing" secondItem="hZF-mh-mjh" secondAttribute="trailing" constant="94" id="aIK-tS-EVC"/>
                                                 <constraint firstItem="hZF-mh-mjh" firstAttribute="leading" secondItem="wHm-Zk-fsN" secondAttribute="trailing" constant="45.5" id="pN5-CR-lwa"/>
+                                                <constraint firstItem="hZF-mh-mjh" firstAttribute="top" secondItem="udT-aP-je7" secondAttribute="top" constant="11" id="qgH-Wv-yAl"/>
                                                 <constraint firstAttribute="bottom" secondItem="hZF-mh-mjh" secondAttribute="bottom" constant="10.5" id="zVN-29-zPE"/>
                                             </constraints>
                                         </tableViewCellContentView>

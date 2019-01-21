@@ -5,7 +5,6 @@ class ContainerViewController: UIViewController {
     enum SlideOutState {
         case bothCollapsed
         case leftPanelExpanded
-        case rightPanelExpanded
     }
     var collectionNavigationController: UINavigationController!
     var collectionViewController: CollectionViewController!
@@ -20,18 +19,23 @@ class ContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewController = UIStoryboard.collectionViewController()
-        collectionViewController.delegate = self as CollectionViewControllerDelegate
+        collectionViewController.delegate = self 
         
         collectionNavigationController = UINavigationController(rootViewController: collectionViewController)
         
         view.addSubview(collectionNavigationController.view)
         addChild(collectionNavigationController)
         collectionNavigationController.didMove(toParent: self)
+        
+        
+        
     }
 }
 
 extension ContainerViewController: CollectionViewControllerDelegate {
     func toggleLeftPanel() {
+        
+        
         let notAlreadyExpanded = (currentState != .leftPanelExpanded)
         
         if notAlreadyExpanded {
@@ -62,8 +66,6 @@ extension ContainerViewController: CollectionViewControllerDelegate {
         sidePanelController.didMove(toParent: self)
     }
     
-    func addRightPanelViewController() {
-    }
     
     func animateLeftPanel(shouldExpand: Bool) {
         if shouldExpand {
@@ -92,9 +94,7 @@ extension ContainerViewController: CollectionViewControllerDelegate {
                         self.collectionNavigationController.view.frame.origin.x = targetPosition
         }, completion: completion)
     }
-    
-    func animateRightPanel(shouldExpand: Bool) {
-    }
+  
 }
 
 

@@ -17,6 +17,7 @@ class CollectionViewController: UIViewController{
     // MARK: Button actions
     @IBAction func buttonMenuTapped(_ sender: Any) {
         delegate?.toggleLeftPanel?()
+        
     }
     ////////////////////////////////////////////////////////////////////////////////
     
@@ -24,25 +25,10 @@ class CollectionViewController: UIViewController{
     
     var museums = [Museum]()
 
-    var estimateWidth = 160.0
-    var cellMarginSize = 16.0
+    let estimateWidth = 160.0
+    let cellMarginSize = 16.0
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        
-        
-        
-        
-        self.collectionView.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
-        
-        setupGridView()
-    
-        downloadMuseums()
-    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
