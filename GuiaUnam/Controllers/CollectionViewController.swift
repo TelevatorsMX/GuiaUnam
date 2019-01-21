@@ -11,26 +11,36 @@ import FirebaseDatabase
 
 class CollectionViewController: UIViewController{
     
+    //////////////////////////////////Menú lateral///////////////////////////////////
+    var delegate: CollectionViewControllerDelegate?
+    
+    // MARK: Button actions
+    @IBAction func buttonMenuTapped(_ sender: Any) {
+        delegate?.toggleLeftPanel?()
+        
+    }
+    ////////////////////////////////////////////////////////////////////////////////
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var museums = [Museum]()
 
-    var estimateWidth = 160.0
-    var cellMarginSize = 16.0
-    
+    let estimateWidth = 160.0
+    let cellMarginSize = 16.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        
+
         self.collectionView.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
-        
-        setupGridView()
+
+         setupGridView()
+
+         downloadMuseums()
+  }
     
-        downloadMuseums()
-    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
