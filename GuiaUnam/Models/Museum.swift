@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 struct Museum{
     
@@ -14,6 +15,7 @@ struct Museum{
     var url: String
     var description: String
     var image: String
+    var location: CLLocation?
     
     init(museumText: String, urlText: String, detalles: String, imageURL: String) {
         
@@ -22,4 +24,14 @@ struct Museum{
         description = detalles
         image = imageURL
     }
+    
+    init(museumText: String, urlText: String, detalles: String, imageURL: String, latitud: CLLocationDegrees, longitud: CLLocationDegrees) {
+        
+        museum = museumText
+        url = urlText
+        description = detalles
+        image = imageURL
+        location = CLLocation(latitude: latitud, longitude: longitud)
+    }
+    
 }
