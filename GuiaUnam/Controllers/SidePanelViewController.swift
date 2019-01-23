@@ -37,6 +37,7 @@ extension SidePanelViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementCell, for: indexPath) as! MenuElementCell
         cell.configureMenuElement(menuElements[indexPath.row])
+        
         return cell
     }
 }
