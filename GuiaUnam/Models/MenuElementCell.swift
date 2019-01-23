@@ -14,9 +14,17 @@ class MenuElementCell: UITableViewCell {
     @IBOutlet weak var menuElementNameLabel: UILabel!
     @IBOutlet weak var descriptionMenuElementLabel: UILabel!
     
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
     func configureMenuElement(_ menuElement: MenuElement) {
         
         menuElementNameLabel.text = menuElement.name
         descriptionMenuElementLabel.text = menuElement.description
+    }
+    
+    func configureProfileElement(_ menuElement: MenuElement){
+        
+        usernameLabel.text = "Nombre de usuario"
+        
     }
 }
