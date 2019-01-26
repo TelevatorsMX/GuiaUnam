@@ -42,15 +42,15 @@ class CollectionViewController: UIViewController{
   }
     
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        self.setupGridView()
-        
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-        }
-    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        
+//        self.setupGridView()
+//        
+//        DispatchQueue.main.async {
+//            self.collectionView.reloadData()
+//        }
+//    }
     
     func setupGridView(){
         let flow = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
