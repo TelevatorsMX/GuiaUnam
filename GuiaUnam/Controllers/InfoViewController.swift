@@ -7,29 +7,43 @@
 //
 
 import UIKit
+import MXParallaxHeader
 
 class InfoViewController: UIViewController {
 
-    @IBOutlet weak var museumImage: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var urlLabel: UILabel!
-    @IBOutlet weak var detailText: UITextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var horarioLabel: UILabel!
+    @IBOutlet weak var precioLabel: UILabel!
+    
+    
     var name: String!
     var url: String!
     var detail: String!
+    var imageView = UIImageView()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        imageView.contentMode = .scaleToFill
+        imageView.backgroundColor = UIColor.gray
+        scrollView.parallaxHeader.view = imageView
+        scrollView.parallaxHeader.mode = MXParallaxHeaderMode.fill
+        scrollView.parallaxHeader.minimumHeight = 0
+        scrollView.parallaxHeader.height = UIScreen.main.bounds.height * 0.4
         setData()
         // Do any additional setup after loading the view.
     }
     
     func setData(){
         self.nameLabel.text = name
-        self.urlLabel.text = url
-        self.detailText.text = detail
+        self.descriptionLabel.text = detail + detail + detail
+        
+//        self.nameLabel.text = name
+//        self.urlLabel.text = url
+//        self.detailText.text = detail
     }
     
 

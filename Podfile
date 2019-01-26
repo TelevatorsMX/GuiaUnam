@@ -9,6 +9,7 @@ target 'GuiaUnam' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod "MXParallaxHeader"
 
   target 'GuiaUnamTests' do
     inherit! :search_paths

@@ -14,6 +14,7 @@ class ItemCell: UICollectionViewCell {
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var imageCell: UIImageView!
     var service = ImageService()
+    var mostRecentURL: String = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,10 +23,12 @@ class ItemCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func setData(image: String){
-        let url = URL(string: image)!
+    func setData(imageString: String){
+        let url = URL(string: imageString)!
         service.load(url: url, completion: { [weak self] (image) in
-            self?.imageCell.image = image
+            if self!.mostRecentURL == imageString {
+                self?.imageCell.image = image
+            }
             self?.loading.stopAnimating()
             self?.loading.isHidden = true
         })
