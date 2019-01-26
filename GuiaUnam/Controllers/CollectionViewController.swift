@@ -42,16 +42,6 @@ class CollectionViewController: UIViewController{
   }
     
     
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        
-//        self.setupGridView()
-//        
-//        DispatchQueue.main.async {
-//            self.collectionView.reloadData()
-//        }
-//    }
-    
     func setupGridView(){
         let flow = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
         
@@ -108,7 +98,9 @@ extension CollectionViewController: UICollectionViewDataSource{ //Data Source
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
-        cell.setData(image: self.museums[indexPath.row].image)
+        
+        cell.mostRecentURL = self.museums[indexPath.row].image
+        cell.setData(imageString: self.museums[indexPath.row].image)
         
         return cell
     }
