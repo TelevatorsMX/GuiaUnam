@@ -21,12 +21,18 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gOM-7V-3gG">
                         <rect key="frame" x="0.0" y="0.0" width="184" height="201"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1xk-fc-i3F">
+                        <rect key="frame" x="82" y="90.5" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="gOM-7V-3gG" secondAttribute="trailing" id="4ip-9l-yYX"/>
                 <constraint firstAttribute="bottom" secondItem="gOM-7V-3gG" secondAttribute="bottom" id="SFJ-M2-5BI"/>
+                <constraint firstItem="1xk-fc-i3F" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="mC5-vf-I6V"/>
+                <constraint firstItem="1xk-fc-i3F" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="pyy-qS-mra"/>
                 <constraint firstItem="gOM-7V-3gG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="t6G-KR-Qb1"/>
                 <constraint firstItem="gOM-7V-3gG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="z8E-7g-7n2"/>
             </constraints>
@@ -34,6 +40,7 @@
             <size key="customSize" width="184" height="201"/>
             <connections>
                 <outlet property="imageCell" destination="gOM-7V-3gG" id="qGO-YX-iz5"/>
+                <outlet property="loading" destination="1xk-fc-i3F" id="HLb-yF-VLZ"/>
             </connections>
             <point key="canvasLocation" x="156.80000000000001" y="155.17241379310346"/>
         </collectionViewCell>
