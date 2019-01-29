@@ -13,6 +13,7 @@ class ItemCell: UICollectionViewCell {
 
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var imageCell: UIImageView!
+    
     var service = ImageService()
     var mostRecentURL: String = ""
     
@@ -20,7 +21,9 @@ class ItemCell: UICollectionViewCell {
         super.awakeFromNib()
         loading.isHidden = false
         loading.startAnimating()
-        // Initialization code
+        
+        imageCell.layer.cornerRadius = 10
+        imageCell.layer.masksToBounds = true
     }
 
     func setData(imageString: String){

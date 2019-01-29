@@ -8,23 +8,11 @@
 
 import UIKit
 
-class ImageService{
+class ImageService {
     
     var cellImage: UIImage!
     
     func load(url: URL, completion: @escaping (UIImage?) -> Void) {
-//        if let data = try? Data(contentsOf: url) {
-//            if let image = UIImage(data: data) {
-//                DispatchQueue.main.async {completion(image)}
-//            }
-//            else {
-//                DispatchQueue.main.async {completion(nil)}
-//            }
-//        }
-//        else {
-//            DispatchQueue.main.async {completion(nil)}
-//        }
-//    }
         let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data, let image = UIImage(data: data) {
                 DispatchQueue.main.async {completion(image)}
@@ -34,6 +22,5 @@ class ImageService{
             }
         }
         dataTask.resume()
-        
     }
 }
