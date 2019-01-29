@@ -9,17 +9,13 @@
 import UIKit
 import FirebaseDatabase
 
-class CollectionViewController: UIViewController{
+class CollectionViewController: UIViewController {
     
-    //////////////////////////////////Menú lateral///////////////////////////////////
-    var delegate: CollectionViewControllerDelegate?
-    
-    // MARK: Button actions
     @IBAction func buttonMenuTapped(_ sender: Any) {
         delegate?.toggleLeftPanel?()
-        
     }
-    ////////////////////////////////////////////////////////////////////////////////
+    
+    var delegate: CollectionViewControllerDelegate?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -41,35 +37,47 @@ class CollectionViewController: UIViewController{
          downloadMuseums()
   }
     
-    
-    func setupGridView(){
+    func setupGridView() {
         let flow = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
         
         flow.minimumInteritemSpacing = CGFloat(self.cellMarginSize)
         flow.minimumLineSpacing = CGFloat(self.cellMarginSize)
     }
     
-    func downloadMuseums(){
-        
+    func downloadMuseums() {
+
         let ref = Database.database().reference()
         ref.child("museos").observe(.childAdded) { (snapshot) in
-            
+
             if let dict = snapshot.value as? [String:Any]{
-                
+
                 let museumText = dict["nombre"] as! String
                 let urlText = dict["url"] as! String
                 let detalles = dict["detalles"] as! String
                 let image = dict["img"] as! String
-                let museum = Museum(museumText: museumText, urlText: urlText, detalles: detalles, imageURL: image)
+                let schedule = dict["horario"] as! String
+                let price = dict["precio"] as! String
+                let latitude = dict["lat"] as! String
+                let longitude = dict["long"] as! String
+                let museum = Museum(museumText: museumText,
+                                    urlText: urlText,
+                                    descriptionText: detalles,
+                                    imageURL: image,
+                                    scheduleText: schedule,
+                                    priceText: price,
+                                    latitudeText: latitude,
+                                    longitudeText: longitude)
+                
                 self.museums.append(museum)
-                //print(self.museums)
                 self.collectionView.reloadData()
+                
+                //print(self.museums)
             }
         }
     }
 }
 
-extension CollectionViewController: UICollectionViewDelegate{
+extension CollectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -84,11 +92,13 @@ extension CollectionViewController: UICollectionViewDelegate{
             detailViewData?.name = museumSelected.museum
             detailViewData?.url = museumSelected.url
             detailViewData?.detail = museumSelected.description
+            detailViewData?.schedule = museumSelected.schedule
+            detailViewData?.price = museumSelected.price
         }
     }
 }
 
-extension CollectionViewController: UICollectionViewDataSource{ //Data Source
+extension CollectionViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -104,10 +114,9 @@ extension CollectionViewController: UICollectionViewDataSource{ //Data Source
         
         return cell
     }
-    
 }
 
-extension CollectionViewController: UICollectionViewDelegateFlowLayout{ //Grid
+extension CollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         

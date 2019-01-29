@@ -17,10 +17,16 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var horarioLabel: UILabel!
     @IBOutlet weak var precioLabel: UILabel!
     
+    @IBOutlet weak var tempExpositionsButton: UIButton!
+    @IBOutlet weak var webButton: UIButton!
+    @IBOutlet weak var mapButton: UIButton!
     
     var name: String!
     var url: String!
     var detail: String!
+    var schedule: String!
+    var price: String!
+    
     var imageView = UIImageView()
     
     
@@ -33,17 +39,31 @@ class InfoViewController: UIViewController {
         scrollView.parallaxHeader.mode = MXParallaxHeaderMode.fill
         scrollView.parallaxHeader.minimumHeight = 0
         scrollView.parallaxHeader.height = UIScreen.main.bounds.height * 0.4
+        
+        tempExpositionsButton.layer.cornerRadius = 5
+        tempExpositionsButton.layer.masksToBounds = true
+        tempExpositionsButton.layer.borderWidth = 1
+        tempExpositionsButton.layer.borderColor = UIColor(red: 255, green: 204, blue: 0, alpha: 1).cgColor
+        
+        webButton.layer.cornerRadius = 5
+        webButton.layer.masksToBounds = true
+        webButton.layer.borderWidth = 1
+        webButton.layer.borderColor = UIColor(red: 255, green: 204, blue: 0, alpha: 1).cgColor
+        
+        mapButton.layer.cornerRadius = 5
+        mapButton.layer.masksToBounds = true
+        mapButton.layer.borderWidth = 1
+        mapButton.layer.borderColor = UIColor(red: 255, green: 204, blue: 0, alpha: 1).cgColor
+        
         setData()
-        // Do any additional setup after loading the view.
     }
     
-    func setData(){
-        self.nameLabel.text = name
-        self.descriptionLabel.text = detail + detail + detail
+    func setData() {
         
-//        self.nameLabel.text = name
-//        self.urlLabel.text = url
-//        self.detailText.text = detail
+        self.nameLabel.text = name
+        self.descriptionLabel.text = detail
+        self.horarioLabel.text = schedule
+        self.precioLabel.text = price
     }
     
 

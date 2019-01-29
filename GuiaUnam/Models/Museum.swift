@@ -15,23 +15,21 @@ struct Museum{
     var url: String
     var description: String
     var image: String
-    var location: CLLocation?
+    var schedule: String
+    var price: String
+    var latitude: String
+    var longitude: String
     
-    init(museumText: String, urlText: String, detalles: String, imageURL: String) {
+    init(museumText: String, urlText: String, descriptionText: String, imageURL: String, scheduleText: String, priceText: String, latitudeText: String, longitudeText: String) {
         
         museum = museumText
         url = urlText
-        description = detalles
+        description = descriptionText
         image = imageURL
-    }
-    
-    init(museumText: String, urlText: String, detalles: String, imageURL: String, latitud: CLLocationDegrees, longitud: CLLocationDegrees) {
-        
-        museum = museumText
-        url = urlText
-        description = detalles
-        image = imageURL
-        location = CLLocation(latitude: latitud, longitude: longitud)
+        schedule = scheduleText
+        price = priceText
+        latitude = latitudeText
+        longitude = longitudeText
     }
     
 }
