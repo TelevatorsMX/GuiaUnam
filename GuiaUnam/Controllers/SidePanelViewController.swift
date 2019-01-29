@@ -18,6 +18,7 @@ class SidePanelViewController: UIViewController {
     
     enum CellIdentifiers {
         static let menuElementCell = "MenuElementCell"
+        static let menuElementLoginCell = "MenuElementLoginCell"
     }
     
     override func viewDidLoad() {
@@ -35,11 +36,21 @@ extension SidePanelViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementCell, for: indexPath) as! MenuElementCell
-        cell.configureMenuElement(menuElements[indexPath.row])
-        
-        return cell
+        var cellReturn: UITableViewCell = UITableViewCell()
+        if let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementCell, for: indexPath) as? MenuElementCell{
+            cell.configureMenuElement(menuElements[indexPath.row])
+            cellReturn = cell
+        }
+        else {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementLoginCell, for: indexPath) as? MenuElementCell{
+            cell.configureMenuElement(menuElements[indexPath.row])
+            cellReturn = cell
+            }
+            
+        }
+        return cellReturn
     }
+    
 }
 
 // Mark: Table View Delegate
