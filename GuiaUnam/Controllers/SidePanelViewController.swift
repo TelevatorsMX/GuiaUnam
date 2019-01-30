@@ -46,13 +46,16 @@ extension SidePanelViewController: UITableViewDataSource {
             cell.configureMenuElement(menuElements[indexPath.row])
             return cell
         }
-        
     }
+    
 }
 
 // Mark: Table View Delegate
 
 extension SidePanelViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0{
+            performSegue(withIdentifier: "IniciaSesion", sender: nil)
+        }
     }
 }
