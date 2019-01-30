@@ -36,21 +36,18 @@ extension SidePanelViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cellReturn: UITableViewCell = UITableViewCell()
-        if let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementCell, for: indexPath) as? MenuElementCell{
+        if indexPath.row != 0{
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementCell, for: indexPath) as! MenuElementCell
             cell.configureMenuElement(menuElements[indexPath.row])
-            cellReturn = cell
+            return cell
         }
-        else {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementLoginCell, for: indexPath) as? MenuElementCell{
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementLoginCell, for: indexPath) as! MenuElementCell
             cell.configureMenuElement(menuElements[indexPath.row])
-            cellReturn = cell
-            }
-            
+            return cell
         }
-        return cellReturn
+        
     }
-    
 }
 
 // Mark: Table View Delegate
