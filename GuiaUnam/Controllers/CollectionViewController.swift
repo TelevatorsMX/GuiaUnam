@@ -2,7 +2,7 @@
 //  CollectionViewController.swift
 //  GuiaUnam
 //
-//  Created by Miguel Vicario on 12/29/18.
+//  Created by Axel Cervantes on 1/13/19.
 //  Copyright © 2018 Miguel Vicario. All rights reserved.
 //
 
@@ -29,6 +29,7 @@ class CollectionViewController: UIViewController {
 
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        self.collectionView.prefetchDataSource = self
 
         self.collectionView.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
 
@@ -70,8 +71,7 @@ class CollectionViewController: UIViewController {
                 
                 self.museums.append(museum)
                 self.collectionView.reloadData()
-                
-                //print(self.museums)
+
             }
         }
     }
@@ -94,6 +94,8 @@ extension CollectionViewController: UICollectionViewDelegate {
             detailViewData?.detail = museumSelected.description
             detailViewData?.schedule = museumSelected.schedule
             detailViewData?.price = museumSelected.price
+            detailViewData?.latitude = museumSelected.latitude
+            detailViewData?.longitude = museumSelected.longitude
         }
     }
 }
@@ -134,5 +136,15 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
         let widht = (self.view.frame.size.width - CGFloat(cellMarginSize) * (cellCount - 1) - margin) / cellCount
         
         return widht
+    }
+}
+
+extension CollectionViewController: UICollectionViewDataSourcePrefetching{
+    
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        
+        for indexPath in indexPaths{
+            
+        }
     }
 }

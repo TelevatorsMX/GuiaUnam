@@ -10,45 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuiaUnam" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z7P-Cn-QM0">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CvR-xs-6gz"/>
-                                </connections>
-                            </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="M" translatesAutoresizingMaskIntoConstraints="NO" id="RUr-JM-cPn">
-                                <rect key="frame" x="167" y="316" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="3bh-rj-3IR"/>
-                                    <constraint firstAttribute="width" constant="40" id="o1k-Ax-tgp"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="z7P-Cn-QM0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1yS-3o-EFg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z7P-Cn-QM0" secondAttribute="trailing" id="836-wh-Xrf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z7P-Cn-QM0" secondAttribute="bottom" id="Apy-SC-4l8"/>
-                            <constraint firstItem="z7P-Cn-QM0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wht-gI-O1g"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <connections>
-                        <outlet property="mapView" destination="z7P-Cn-QM0" id="ysZ-bF-LSK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2359" y="9"/>
-        </scene>
         <!--Museos-->
         <scene sceneID="XrG-9H-f2w">
             <objects>
@@ -198,6 +159,9 @@
                                 <state key="normal" title="Página Web">
                                     <color key="titleColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="webAction:" destination="G9P-dp-tqQ" eventType="touchUpInside" id="vC2-vr-FdN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Aza-Kh-tIp">
                                 <rect key="frame" x="4.9999999999999929" y="703" width="118.33333333333331" height="45"/>
@@ -215,11 +179,11 @@
                                     <color key="titleColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="eQ5-Za-gY6"/>
+                                    <action selector="mapAction:" destination="G9P-dp-tqQ" eventType="touchUpInside" id="MFW-pp-Cwg"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.13333333333333333" green="0.15686274509803921" blue="0.19215686274509802" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.13333333333333333" green="0.15686274509803921" blue="0.19215686274509802" alpha="0.75" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="InfoView"/>
                         <constraints>
                             <constraint firstItem="IwM-CG-ZBW" firstAttribute="top" secondItem="5eh-kL-cYv" secondAttribute="bottom" constant="5" id="1YY-3R-lms"/>
@@ -255,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9w-Gj-yTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584.8" y="8.1280788177339911"/>
+            <point key="canvasLocation" x="1518" y="9"/>
         </scene>
         <!--Side Panel View Controller-->
         <scene sceneID="7Jr-q5-plI">
@@ -377,7 +341,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="M" width="574" height="488"/>
         <image name="profile" width="430" height="427"/>
     </resources>
 </document>
