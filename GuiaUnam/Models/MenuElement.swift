@@ -6,6 +6,7 @@ struct MenuElement{
     let description:    String?
     let profileImage:   UIImage?
     let userName:       String?
+    static var isSignedIn = false
     //let image: UIImage
     
     init(name: String, description: String) {
@@ -27,6 +28,7 @@ struct MenuElement{
     
     
     static func allElementsSignedIn() -> [MenuElement]{
+        isSignedIn = true
         return [
             MenuElement(profileImage: nil, userName: "Sesión iniciada"),
             MenuElement(name: "Favoritos", description: "Descubre tus museos favoritos"),
@@ -37,9 +39,9 @@ struct MenuElement{
     }
     
     static func allElementsUnsigned() -> [MenuElement]{
+        isSignedIn = false
         return [
             MenuElement(profileImage: nil, userName: "Iniciar Sesión"),
-            MenuElement(name: "Iniciar Sesión", description: "No te pierdas de lo nuevo"),
             MenuElement(name: "Cerca de ti", description: "Visita un museo cercano")
         ]
     }

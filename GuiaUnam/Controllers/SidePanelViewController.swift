@@ -15,6 +15,8 @@ class SidePanelViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var menuElements: Array<MenuElement>!
+    var identifiersSigned = [String] ()
+    var identifiersUnsigned = [String] ()
     
     enum CellIdentifiers {
         static let menuElementCell = "MenuElementCell"
@@ -23,7 +25,9 @@ class SidePanelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        identifiersSigned = ["User","Favoritos","PorVisitar","Recomendaciones","EventosProximos"]
+        identifiersUnsigned = ["IniciarSesion","CercaDeTi"]
+        //let identifiersUnsigned = []
         tableView.reloadData()
     }
 }
@@ -48,14 +52,33 @@ extension SidePanelViewController: UITableViewDataSource {
         }
     }
     
+    
 }
 
 // Mark: Table View Delegate
 
 extension SidePanelViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0{
+       /* if indexPath.row == 0{
             performSegue(withIdentifier: "IniciaSesion", sender: nil)
+        }*/
+        
+        if MenuElement.isSignedIn == true{
+            let vcName = identifiersSigned[indexPath.row]
+            let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+            self.navigationController?.pushViewController(viewController!, animated: false)
+            self.present(viewController!, animated: true, completion: nil)
         }
+        else{
+            let vcName = identifiersUnsigned[indexPath.row]
+            let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+            //self.navigationController?.pushViewController(viewController!, animated: false)
+            self.present(viewController!, animated: true, completion: nil)
+        }
+        /*
+        let vc = ViewController() //your view controller
+        self.present(vc, animated: true, completion: nil)
+         */
     }
+    
 }

@@ -57,7 +57,7 @@ extension ContainerViewController: CollectionViewControllerDelegate {
         guard leftViewController == nil else { return }
         
         if let vc = UIStoryboard.leftViewController() {
-            vc.menuElements = MenuElement.allElementsUnsigned()
+            vc.menuElements = MenuElement.allElementsSignedIn()
             addChildSidePanelController(vc)
             leftViewController = vc
         }
