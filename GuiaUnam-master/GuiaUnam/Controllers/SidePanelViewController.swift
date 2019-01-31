@@ -15,14 +15,19 @@ class SidePanelViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var menuElements: Array<MenuElement>!
+    var identifiersSigned = [String] ()
+    var identifiersUnsigned = [String] ()
     
     enum CellIdentifiers {
         static let menuElementCell = "MenuElementCell"
+        static let menuElementLoginCell = "MenuElementLoginCell"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        identifiersSigned = ["User","Favoritos","PorVisitar","Recomendaciones","EventosProximos"]
+        identifiersUnsigned = ["IniciarSesion","CercaDeTi"]
+        //let identifiersUnsigned = []
         tableView.reloadData()
     }
 }
@@ -35,16 +40,45 @@ extension SidePanelViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementCell, for: indexPath) as! MenuElementCell
-        cell.configureMenuElement(menuElements[indexPath.row])
-        
-        return cell
+        if indexPath.row != 0{
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementCell, for: indexPath) as! MenuElementCell
+            cell.configureMenuElement(menuElements[indexPath.row])
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementLoginCell, for: indexPath) as! MenuElementCell
+            cell.configureMenuElement(menuElements[indexPath.row])
+            return cell
+        }
     }
+    
+    
 }
 
 // Mark: Table View Delegate
 
 extension SidePanelViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       /* if indexPath.row == 0{
+            performSegue(withIdentifier: "IniciaSesion", sender: nil)
+        }*/
+        
+        if MenuElement.isSignedIn == true{
+            let vcName = identifiersSigned[indexPath.row]
+            let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+            self.navigationController?.pushViewController(viewController!, animated: false)
+            self.present(viewController!, animated: true, completion: nil)
+        }
+        else{
+            let vcName = identifiersUnsigned[indexPath.row]
+            let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+            //self.navigationController?.pushViewController(viewController!, animated: false)
+            self.present(viewController!, animated: true, completion: nil)
+        }
+        /*
+        let vc = ViewController() //your view controller
+        self.present(vc, animated: true, completion: nil)
+         */
     }
+    
 }

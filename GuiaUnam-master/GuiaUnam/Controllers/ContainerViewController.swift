@@ -23,7 +23,6 @@ class ContainerViewController: UIViewController {
     
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewController = UIStoryboard.collectionViewController()
@@ -34,8 +33,6 @@ class ContainerViewController: UIViewController {
         view.addSubview(collectionNavigationController.view)
         addChild(collectionNavigationController)
         collectionNavigationController.didMove(toParent: self)
-        
-        
         
     }
 }
