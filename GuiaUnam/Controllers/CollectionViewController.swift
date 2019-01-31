@@ -29,7 +29,6 @@ class CollectionViewController: UIViewController {
 
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        self.collectionView.prefetchDataSource = self
 
         self.collectionView.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
 
@@ -46,12 +45,16 @@ class CollectionViewController: UIViewController {
     }
     
     func downloadMuseums() {
-
+        
         let ref = Database.database().reference()
-        ref.child("museos").observe(.childAdded) { (snapshot) in
-
-            if let dict = snapshot.value as? [String:Any]{
-
+        ref.child("museos").observe(.value) { (snapshot) in
+            
+            self.museums.removeAll()
+            
+            for child in snapshot.children {
+                
+                let snap = child as! DataSnapshot
+                let dict = snap.value as! [String: Any]
                 let museumText = dict["nombre"] as! String
                 let urlText = dict["url"] as! String
                 let detalles = dict["detalles"] as! String
@@ -70,9 +73,11 @@ class CollectionViewController: UIViewController {
                                     longitudeText: longitude)
                 
                 self.museums.append(museum)
-                self.collectionView.reloadData()
-
+                
             }
+            
+            self.collectionView.reloadData()
+            
         }
     }
 }
@@ -133,18 +138,8 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
         let cellCount = floor(CGFloat((self.view.frame.size.width) / estimatedWidth))
         
         let margin = CGFloat(cellMarginSize * 2)
-        let widht = (self.view.frame.size.width - CGFloat(cellMarginSize) * (cellCount - 1) - margin) / cellCount
+        let width = (self.view.frame.size.width - CGFloat(cellMarginSize) * (cellCount - 1) - margin) / cellCount
         
-        return widht
-    }
-}
-
-extension CollectionViewController: UICollectionViewDataSourcePrefetching{
-    
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        
-        for indexPath in indexPaths{
-            
-        }
+        return width
     }
 }
