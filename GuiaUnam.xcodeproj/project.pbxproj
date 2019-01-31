@@ -19,8 +19,8 @@
 		EE4ACEF021E94B6D002651C0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */; };
 		EE8EA12121F2949F007DD356 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8EA12021F2949E007DD356 /* ItemCell.xib */; };
 		EE8EA12421F2988C007DD356 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8EA12321F2988C007DD356 /* ImageService.swift */; };
+		EEB7DAA622027BF400C699E5 /* CustomPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB7DAA522027BF400C699E5 /* CustomPin.swift */; };
 		EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06D421D6C5B9003586B6 /* AppDelegate.swift */; };
-		EECC06D721D6C5B9003586B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06D621D6C5B9003586B6 /* ViewController.swift */; };
 		EECC06DA21D6C5B9003586B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECC06D821D6C5B9003586B6 /* Main.storyboard */; };
 		EECC06DC21D6C5BA003586B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECC06DB21D6C5BA003586B6 /* Assets.xcassets */; };
 		EECC06DF21D6C5BA003586B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECC06DD21D6C5BA003586B6 /* LaunchScreen.storyboard */; };
@@ -68,9 +68,9 @@
 		EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		EE8EA12021F2949E007DD356 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		EE8EA12321F2988C007DD356 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		EEB7DAA522027BF400C699E5 /* CustomPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPin.swift; sourceTree = "<group>"; };
 		EECC06D121D6C5B9003586B6 /* GuiaUnam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuiaUnam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECC06D421D6C5B9003586B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EECC06D621D6C5B9003586B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EECC06D921D6C5B9003586B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EECC06DB21D6C5BA003586B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EECC06DE21D6C5BA003586B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -141,7 +141,6 @@
 		CE44277721D6D63F00880058 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EECC06D621D6C5B9003586B6 /* ViewController.swift */,
 				EECC070721D7BBE4003586B6 /* CollectionViewController.swift */,
 				CE6DDFA221EC49380060D018 /* ContainerViewController.swift */,
 				CE6DDFA821EC4C690060D018 /* SidePanelViewController.swift */,
@@ -159,6 +158,7 @@
 				CE613AB821ED88BE0066E0F1 /* MenuElement.swift */,
 				CE613ABA21ED94F50066E0F1 /* MenuElementCell.swift */,
 				EECC070321D7BA01003586B6 /* ItemCell.swift */,
+				EEB7DAA522027BF400C699E5 /* CustomPin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,8 +202,8 @@
 				CE44277721D6D63F00880058 /* Controllers */,
 				EECC06DB21D6C5BA003586B6 /* Assets.xcassets */,
 				EECC06D421D6C5B9003586B6 /* AppDelegate.swift */,
-				EECC06DD21D6C5BA003586B6 /* LaunchScreen.storyboard */,
 				EECC06D821D6C5B9003586B6 /* Main.storyboard */,
+				EECC06DD21D6C5BA003586B6 /* LaunchScreen.storyboard */,
 				EEE6DF0221E5348100F52CF7 /* GoogleService-Info.plist */,
 				EECC06E021D6C5BA003586B6 /* Info.plist */,
 			);
@@ -472,13 +472,13 @@
 			files = (
 				CE6DDFAB21EC4C9D0060D018 /* SidePanelViewControllerDelegate.swift in Sources */,
 				EECC070821D7BBE4003586B6 /* CollectionViewController.swift in Sources */,
-				EECC06D721D6C5B9003586B6 /* ViewController.swift in Sources */,
 				CE6DDFA921EC4C690060D018 /* SidePanelViewController.swift in Sources */,
 				CE6DDFA321EC49380060D018 /* ContainerViewController.swift in Sources */,
 				EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */,
 				CE613AB921ED88BE0066E0F1 /* MenuElement.swift in Sources */,
 				CE613ABB21ED94F50066E0F1 /* MenuElementCell.swift in Sources */,
 				EECC070521D7BA01003586B6 /* ItemCell.swift in Sources */,
+				EEB7DAA622027BF400C699E5 /* CustomPin.swift in Sources */,
 				CE6DDFA521EC497E0060D018 /* CollectionViewControllerDelegate.swift in Sources */,
 				EE4ACEF021E94B6D002651C0 /* InfoViewController.swift in Sources */,
 				EE4ACEE821E66C17002651C0 /* Museum.swift in Sources */,

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 import MXParallaxHeader
 
 class InfoViewController: UIViewController {
@@ -21,14 +23,15 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var webButton: UIButton!
     @IBOutlet weak var mapButton: UIButton!
     
-    var name: String!
-    var url: String!
-    var detail: String!
-    var schedule: String!
-    var price: String!
+    var name = String()
+    var url = String()
+    var detail = String()
+    var schedule = String()
+    var price = String()
+    var latitude = String()
+    var longitude = String()
     
     var imageView = UIImageView()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,15 +69,32 @@ class InfoViewController: UIViewController {
         self.precioLabel.text = price
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func openMapForPlace() {
+        
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(Double(latitude) ?? 0, Double(longitude) ?? 0)
+        let regionSpan = MKCoordinateRegion(center: coordinates,
+                                            latitudinalMeters: regionDistance,
+                                            longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "\(self.name)"
+        mapItem.openInMaps(launchOptions: options)
     }
-    */
+    
+    @IBAction func webAction(_ sender: UIButton) {
+        
+        guard let url = URL(string: url ) else { return }
+        UIApplication.shared.open(url)
+    }
 
+    @IBAction func mapAction(_ sender: UIButton) {
+        
+        openMapForPlace()
+    }
 }
