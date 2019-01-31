@@ -23,7 +23,6 @@ class ContainerViewController: UIViewController {
     
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewController = UIStoryboard.collectionViewController()
@@ -34,8 +33,6 @@ class ContainerViewController: UIViewController {
         view.addSubview(collectionNavigationController.view)
         addChild(collectionNavigationController)
         collectionNavigationController.didMove(toParent: self)
-        
-        
         
     }
 }
@@ -60,7 +57,7 @@ extension ContainerViewController: CollectionViewControllerDelegate {
         guard leftViewController == nil else { return }
         
         if let vc = UIStoryboard.leftViewController() {
-            vc.menuElements = MenuElement.allElementsSignedIn()
+            vc.menuElements = MenuElement.allElementsUnsigned()
             addChildSidePanelController(vc)
             leftViewController = vc
         }

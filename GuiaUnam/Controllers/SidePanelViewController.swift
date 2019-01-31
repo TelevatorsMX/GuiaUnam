@@ -18,6 +18,7 @@ class SidePanelViewController: UIViewController {
     
     enum CellIdentifiers {
         static let menuElementCell = "MenuElementCell"
+        static let menuElementLoginCell = "MenuElementLoginCell"
     }
     
     override func viewDidLoad() {
@@ -35,16 +36,26 @@ extension SidePanelViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementCell, for: indexPath) as! MenuElementCell
-        cell.configureMenuElement(menuElements[indexPath.row])
-        
-        return cell
+        if indexPath.row != 0{
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementCell, for: indexPath) as! MenuElementCell
+            cell.configureMenuElement(menuElements[indexPath.row])
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.menuElementLoginCell, for: indexPath) as! MenuElementCell
+            cell.configureMenuElement(menuElements[indexPath.row])
+            return cell
+        }
     }
+    
 }
 
 // Mark: Table View Delegate
 
 extension SidePanelViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0{
+            performSegue(withIdentifier: "IniciaSesion", sender: nil)
+        }
     }
 }
