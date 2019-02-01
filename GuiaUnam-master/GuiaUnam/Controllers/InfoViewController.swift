@@ -30,18 +30,23 @@ class InfoViewController: UIViewController {
     var price = String()
     var latitude = String()
     var longitude = String()
+    var infoImg = String()
     
     var imageView = UIImageView()
+    
+    var service = ImageService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = UIColor.gray
+        
         scrollView.parallaxHeader.view = imageView
         scrollView.parallaxHeader.mode = MXParallaxHeaderMode.fill
         scrollView.parallaxHeader.minimumHeight = 0
         scrollView.parallaxHeader.height = UIScreen.main.bounds.height * 0.4
+        scrollView.flashScrollIndicators()
         
         tempExpositionsButton.layer.cornerRadius = 5
         tempExpositionsButton.layer.masksToBounds = true
@@ -59,6 +64,7 @@ class InfoViewController: UIViewController {
         mapButton.layer.borderColor = UIColor(red: 255, green: 204, blue: 0, alpha: 1).cgColor
         
         setData()
+        setImage(imageString: infoImg)
     }
     
     func setData() {
@@ -67,6 +73,15 @@ class InfoViewController: UIViewController {
         self.descriptionLabel.text = detail
         self.horarioLabel.text = schedule
         self.precioLabel.text = price
+    }
+    
+    func setImage(imageString: String){
+        let url = URL(string: imageString)!
+        service.load(url: url, completion: { [weak self] (image) in
+                self?.imageView.image = image
+//            self?.loading.stopAnimating()
+//            self?.loading.isHidden = true
+        })
     }
     
     func openMapForPlace() {
