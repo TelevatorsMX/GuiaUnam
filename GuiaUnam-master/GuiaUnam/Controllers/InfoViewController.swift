@@ -52,6 +52,7 @@ class InfoViewController: UIViewController {
         tempExpositionsButton.layer.masksToBounds = true
         tempExpositionsButton.layer.borderWidth = 1
         tempExpositionsButton.layer.borderColor = UIColor(red: 255, green: 204, blue: 0, alpha: 1).cgColor
+        tempExpositionsButton.addTarget(self, action: #selector(tempEventsTransition), for: .touchUpInside)
         
         webButton.layer.cornerRadius = 5
         webButton.layer.masksToBounds = true
@@ -79,8 +80,6 @@ class InfoViewController: UIViewController {
         let url = URL(string: imageString)!
         service.load(url: url, completion: { [weak self] (image) in
                 self?.imageView.image = image
-//            self?.loading.stopAnimating()
-//            self?.loading.isHidden = true
         })
     }
     
@@ -100,6 +99,13 @@ class InfoViewController: UIViewController {
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = "\(self.name)"
         mapItem.openInMaps(launchOptions: options)
+    }
+    
+    @objc func tempEventsTransition(){
+
+        let tempViewController = TemporalEventsViewController(nibName: "TemporalEventsViewController", bundle: nil)
+        tempViewController.modalTransitionStyle = .flipHorizontal
+        self.present(tempViewController, animated: true, completion: nil)
     }
     
     @IBAction func webAction(_ sender: UIButton) {

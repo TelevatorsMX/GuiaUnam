@@ -20,6 +20,8 @@
 		EE8EA12121F2949F007DD356 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8EA12021F2949E007DD356 /* ItemCell.xib */; };
 		EE8EA12421F2988C007DD356 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8EA12321F2988C007DD356 /* ImageService.swift */; };
 		EEB7DAA622027BF400C699E5 /* CustomPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB7DAA522027BF400C699E5 /* CustomPin.swift */; };
+		EEB7DAAB2203D6D000C699E5 /* TemporalEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB7DAA92203D6D000C699E5 /* TemporalEventsViewController.swift */; };
+		EEB7DAAC2203D6D000C699E5 /* TemporalEventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB7DAAA2203D6D000C699E5 /* TemporalEventsViewController.xib */; };
 		EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06D421D6C5B9003586B6 /* AppDelegate.swift */; };
 		EECC06DA21D6C5B9003586B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECC06D821D6C5B9003586B6 /* Main.storyboard */; };
 		EECC06DC21D6C5BA003586B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECC06DB21D6C5BA003586B6 /* Assets.xcassets */; };
@@ -69,6 +71,8 @@
 		EE8EA12021F2949E007DD356 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		EE8EA12321F2988C007DD356 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		EEB7DAA522027BF400C699E5 /* CustomPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPin.swift; sourceTree = "<group>"; };
+		EEB7DAA92203D6D000C699E5 /* TemporalEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporalEventsViewController.swift; sourceTree = "<group>"; };
+		EEB7DAAA2203D6D000C699E5 /* TemporalEventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemporalEventsViewController.xib; sourceTree = "<group>"; };
 		EECC06D121D6C5B9003586B6 /* GuiaUnam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuiaUnam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECC06D421D6C5B9003586B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EECC06D921D6C5B9003586B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				CE6DDFA421EC497E0060D018 /* CollectionViewControllerDelegate.swift */,
 				EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */,
 				CE6DDFAA21EC4C9D0060D018 /* SidePanelViewControllerDelegate.swift */,
+				EEB7DAA92203D6D000C699E5 /* TemporalEventsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				EE8EA12021F2949E007DD356 /* ItemCell.xib */,
+				EEB7DAAA2203D6D000C699E5 /* TemporalEventsViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB7DAAC2203D6D000C699E5 /* TemporalEventsViewController.xib in Resources */,
 				EECC06DF21D6C5BA003586B6 /* LaunchScreen.storyboard in Resources */,
 				EEE6DF0321E5348100F52CF7 /* GoogleService-Info.plist in Resources */,
 				EE8EA12121F2949F007DD356 /* ItemCell.xib in Resources */,
@@ -473,6 +480,7 @@
 				CE6DDFAB21EC4C9D0060D018 /* SidePanelViewControllerDelegate.swift in Sources */,
 				EECC070821D7BBE4003586B6 /* CollectionViewController.swift in Sources */,
 				CE6DDFA921EC4C690060D018 /* SidePanelViewController.swift in Sources */,
+				EEB7DAAB2203D6D000C699E5 /* TemporalEventsViewController.swift in Sources */,
 				CE6DDFA321EC49380060D018 /* ContainerViewController.swift in Sources */,
 				EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */,
 				CE613AB921ED88BE0066E0F1 /* MenuElement.swift in Sources */,
