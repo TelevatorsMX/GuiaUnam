@@ -65,20 +65,31 @@ extension SidePanelViewController: UITableViewDelegate {
         
         if MenuElement.isSignedIn == true{
             let vcName = identifiersSigned[indexPath.row]
+            
             let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
-            self.navigationController?.pushViewController(viewController!, animated: false)
-            self.present(viewController!, animated: true, completion: nil)
+            self.navigationController?.pushViewController(viewController!, animated: true)
+            
+            let navController = UINavigationController(rootViewController: viewController!)
+            self.present(navController, animated: true, completion: nil)
+            
+            
         }
         else{
             let vcName = identifiersUnsigned[indexPath.row]
+            
             let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
-            //self.navigationController?.pushViewController(viewController!, animated: false)
-            self.present(viewController!, animated: true, completion: nil)
+            self.navigationController?.pushViewController(viewController!, animated: true)
+ 
+            let navController = UINavigationController(rootViewController: viewController!)
+            self.present(navController, animated: true, completion: nil)
+ 
+            
         }
-        /*
-        let vc = ViewController() //your view controller
-        self.present(vc, animated: true, completion: nil)
-         */
+        
+    }
+    
+    @objc func backAction() -> Void {
+        dismiss(animated: true, completion: nil)
     }
     
 }
