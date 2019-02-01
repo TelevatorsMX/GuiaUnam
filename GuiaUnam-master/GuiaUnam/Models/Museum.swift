@@ -19,8 +19,9 @@ struct Museum{
     var price: String
     var latitude: String
     var longitude: String
+    var infoImg: String
     
-    init(museumText: String, urlText: String, descriptionText: String, imageURL: String, scheduleText: String, priceText: String, latitudeText: String, longitudeText: String) {
+    init(museumText: String, urlText: String, descriptionText: String, imageURL: String, scheduleText: String, priceText: String, latitudeText: String, longitudeText: String, infoImgText: String) {
         
         museum = museumText
         url = urlText
@@ -30,6 +31,7 @@ struct Museum{
         price = priceText
         latitude = latitudeText
         longitude = longitudeText
+        infoImg = infoImgText
     }
     
 }
