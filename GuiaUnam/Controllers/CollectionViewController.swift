@@ -63,6 +63,7 @@ class CollectionViewController: UIViewController {
                 let price = dict["precio"] as! String
                 let latitude = dict["lat"] as! String
                 let longitude = dict["long"] as! String
+                let infoImg = dict["infoimg"] as! String
                 let museum = Museum(museumText: museumText,
                                     urlText: urlText,
                                     descriptionText: detalles,
@@ -70,7 +71,8 @@ class CollectionViewController: UIViewController {
                                     scheduleText: schedule,
                                     priceText: price,
                                     latitudeText: latitude,
-                                    longitudeText: longitude)
+                                    longitudeText: longitude,
+                                    infoImgText: infoImg)
                 
                 self.museums.append(museum)
                 
@@ -101,6 +103,7 @@ extension CollectionViewController: UICollectionViewDelegate {
             detailViewData?.price = museumSelected.price
             detailViewData?.latitude = museumSelected.latitude
             detailViewData?.longitude = museumSelected.longitude
+            detailViewData?.infoImg = museumSelected.infoImg
         }
     }
 }
