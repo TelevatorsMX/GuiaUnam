@@ -15,7 +15,7 @@
 		CE6DDFA521EC497E0060D018 /* CollectionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DDFA421EC497E0060D018 /* CollectionViewControllerDelegate.swift */; };
 		CE6DDFA921EC4C690060D018 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DDFA821EC4C690060D018 /* SidePanelViewController.swift */; };
 		CE6DDFAB21EC4C9D0060D018 /* SidePanelViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DDFAA21EC4C9D0060D018 /* SidePanelViewControllerDelegate.swift */; };
-		CEE7983E220419A3009E14ED /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE7983D220419A3009E14ED /* PushViewController.swift */; };
+		CEE798422204289F009E14ED /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE798412204289E009E14ED /* PushViewController.swift */; };
 		EE4ACEE821E66C17002651C0 /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4ACEE721E66C17002651C0 /* Museum.swift */; };
 		EE4ACEF021E94B6D002651C0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */; };
 		EE8EA12121F2949F007DD356 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8EA12021F2949E007DD356 /* ItemCell.xib */; };
@@ -67,7 +67,7 @@
 		CE6DDFA421EC497E0060D018 /* CollectionViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerDelegate.swift; sourceTree = "<group>"; };
 		CE6DDFA821EC4C690060D018 /* SidePanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
 		CE6DDFAA21EC4C9D0060D018 /* SidePanelViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelViewControllerDelegate.swift; sourceTree = "<group>"; };
-		CEE7983D220419A3009E14ED /* PushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PushViewController.swift; path = "/Users/axl/apps/GuiaUnam/GuiaUnam-master/GuiaUnam/Controllers/PushViewController.swift"; sourceTree = "<absolute>"; };
+		CEE798412204289E009E14ED /* PushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
 		EE4ACEE721E66C17002651C0 /* Museum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
 		EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		EE8EA12021F2949E007DD356 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 				CE6DDFA821EC4C690060D018 /* SidePanelViewController.swift */,
 				CE6DDFA421EC497E0060D018 /* CollectionViewControllerDelegate.swift */,
 				EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */,
-				CEE7983D220419A3009E14ED /* PushViewController.swift */,
+				CEE798412204289E009E14ED /* PushViewController.swift */,
 				CE6DDFAA21EC4C9D0060D018 /* SidePanelViewControllerDelegate.swift */,
 				EEB7DAA92203D6D000C699E5 /* TemporalEventsViewController.swift */,
 			);
@@ -482,12 +482,12 @@
 			files = (
 				CE6DDFAB21EC4C9D0060D018 /* SidePanelViewControllerDelegate.swift in Sources */,
 				EECC070821D7BBE4003586B6 /* CollectionViewController.swift in Sources */,
+				CEE798422204289F009E14ED /* PushViewController.swift in Sources */,
 				CE6DDFA921EC4C690060D018 /* SidePanelViewController.swift in Sources */,
 				EEB7DAAB2203D6D000C699E5 /* TemporalEventsViewController.swift in Sources */,
 				CE6DDFA321EC49380060D018 /* ContainerViewController.swift in Sources */,
 				EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */,
 				CE613AB921ED88BE0066E0F1 /* MenuElement.swift in Sources */,
-				CEE7983E220419A3009E14ED /* PushViewController.swift in Sources */,
 				CE613ABB21ED94F50066E0F1 /* MenuElementCell.swift in Sources */,
 				EECC070521D7BA01003586B6 /* ItemCell.swift in Sources */,
 				EEB7DAA622027BF400C699E5 /* CustomPin.swift in Sources */,
