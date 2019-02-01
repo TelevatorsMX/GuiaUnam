@@ -72,11 +72,7 @@ extension SidePanelViewController: UITableViewDelegate {
             let navController = UINavigationController(rootViewController: viewController!)
             self.present(navController, animated: true, completion: nil)
             
-            let backButton = UIButton(type: .custom)
-            backButton.setTitle("Regresar", for: .normal)
-            backButton.setTitleColor(backButton.tintColor, for: .normal)
-            backButton.addTarget(self, action: #selector(backAction), for: .touchUpInside)
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem (customView: backButton)
+            
         }
         else{
             let vcName = identifiersUnsigned[indexPath.row]
@@ -87,18 +83,13 @@ extension SidePanelViewController: UITableViewDelegate {
             let navController = UINavigationController(rootViewController: viewController!)
             self.present(navController, animated: true, completion: nil)
  
-            let backButton = UIButton(type: .custom)
-            backButton.setTitle("Regresar", for: .normal)
-            backButton.setTitleColor(backButton.tintColor, for: .normal)
-            backButton.addTarget(self, action: #selector(backAction), for: .touchUpInside)
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem (customView: backButton)
             
         }
         
     }
     
     @objc func backAction() -> Void {
-        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
 }
