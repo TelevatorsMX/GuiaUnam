@@ -89,8 +89,8 @@
                                                 <color key="textColor" red="0.94825726747512817" green="0.82377141714096069" blue="0.28608733415603638" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHf-0w-52M">
-                                                <rect key="frame" x="10" y="72" width="355" height="20.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHf-0w-52M">
+                                                <rect key="frame" x="10" y="72" width="350" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
                                                 <color key="textColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -107,14 +107,14 @@
                                                 <color key="textColor" red="0.96470588235294119" green="0.78823529411764703" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horaio Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pg5-Nx-fc5">
-                                                <rect key="frame" x="10" y="170.33333333333331" width="355" height="20.333333333333343"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horaio Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pg5-Nx-fc5">
+                                                <rect key="frame" x="10" y="170.33333333333331" width="350" height="20.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
                                                 <color key="textColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1QA-r1-in2">
-                                                <rect key="frame" x="10" y="265.66666666666669" width="355" height="20.333333333333314"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1QA-r1-in2">
+                                                <rect key="frame" x="10" y="265.66666666666669" width="350" height="20.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
                                                 <color key="textColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -133,14 +133,14 @@
                                             <constraint firstItem="iHf-0w-52M" firstAttribute="top" secondItem="Ztz-HB-KaW" secondAttribute="bottom" constant="10" id="Q1w-wE-M2a"/>
                                             <constraint firstItem="iHf-0w-52M" firstAttribute="leading" secondItem="Pac-Cd-it5" secondAttribute="leading" constant="10" id="UXY-WC-Swg"/>
                                             <constraint firstItem="1QA-r1-in2" firstAttribute="top" secondItem="G9C-55-dZa" secondAttribute="bottom" constant="20" id="dG1-YB-AKu"/>
-                                            <constraint firstAttribute="trailing" secondItem="1QA-r1-in2" secondAttribute="trailing" constant="10" id="h3i-uY-h4E"/>
+                                            <constraint firstAttribute="trailing" secondItem="1QA-r1-in2" secondAttribute="trailing" constant="15" id="h3i-uY-h4E"/>
                                             <constraint firstItem="Pg5-Nx-fc5" firstAttribute="top" secondItem="NPk-A4-Elg" secondAttribute="bottom" constant="20" id="i2J-pc-Gue"/>
-                                            <constraint firstAttribute="trailing" secondItem="iHf-0w-52M" secondAttribute="trailing" constant="10" id="j3d-Kg-Ihw"/>
+                                            <constraint firstAttribute="trailing" secondItem="iHf-0w-52M" secondAttribute="trailing" constant="15" id="j3d-Kg-Ihw"/>
                                             <constraint firstItem="G9C-55-dZa" firstAttribute="leading" secondItem="Pac-Cd-it5" secondAttribute="leading" constant="10" id="jaO-2X-cT0"/>
                                             <constraint firstAttribute="trailing" secondItem="G9C-55-dZa" secondAttribute="trailing" constant="10" id="kxx-J0-C4Z"/>
                                             <constraint firstItem="Ztz-HB-KaW" firstAttribute="leading" secondItem="Pac-Cd-it5" secondAttribute="leading" constant="10" id="pnD-mZ-1pu"/>
                                             <constraint firstItem="Ztz-HB-KaW" firstAttribute="top" secondItem="Pac-Cd-it5" secondAttribute="top" constant="20" id="vwp-4R-t3y"/>
-                                            <constraint firstAttribute="trailing" secondItem="Pg5-Nx-fc5" secondAttribute="trailing" constant="10" id="yDE-n5-aZK"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pg5-Nx-fc5" secondAttribute="trailing" constant="15" id="yDE-n5-aZK"/>
                                         </constraints>
                                     </view>
                                 </subviews>
