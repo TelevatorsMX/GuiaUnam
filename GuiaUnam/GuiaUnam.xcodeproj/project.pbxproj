@@ -20,7 +20,6 @@
 		EE4ACEF021E94B6D002651C0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */; };
 		EE8EA12121F2949F007DD356 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8EA12021F2949E007DD356 /* ItemCell.xib */; };
 		EE8EA12421F2988C007DD356 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8EA12321F2988C007DD356 /* ImageService.swift */; };
-		EEB7DAA622027BF400C699E5 /* CustomPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB7DAA522027BF400C699E5 /* CustomPin.swift */; };
 		EEB7DAAB2203D6D000C699E5 /* TemporalEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB7DAA92203D6D000C699E5 /* TemporalEventsViewController.swift */; };
 		EEB7DAAC2203D6D000C699E5 /* TemporalEventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB7DAAA2203D6D000C699E5 /* TemporalEventsViewController.xib */; };
 		EECC06D521D6C5B9003586B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC06D421D6C5B9003586B6 /* AppDelegate.swift */; };
@@ -72,7 +71,6 @@
 		EE4ACEEF21E94B6D002651C0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		EE8EA12021F2949E007DD356 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		EE8EA12321F2988C007DD356 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
-		EEB7DAA522027BF400C699E5 /* CustomPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPin.swift; sourceTree = "<group>"; };
 		EEB7DAA92203D6D000C699E5 /* TemporalEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporalEventsViewController.swift; sourceTree = "<group>"; };
 		EEB7DAAA2203D6D000C699E5 /* TemporalEventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemporalEventsViewController.xib; sourceTree = "<group>"; };
 		EECC06D121D6C5B9003586B6 /* GuiaUnam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuiaUnam.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +164,6 @@
 				CE613AB821ED88BE0066E0F1 /* MenuElement.swift */,
 				CE613ABA21ED94F50066E0F1 /* MenuElementCell.swift */,
 				EECC070321D7BA01003586B6 /* ItemCell.swift */,
-				EEB7DAA522027BF400C699E5 /* CustomPin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -490,7 +487,6 @@
 				CE613AB921ED88BE0066E0F1 /* MenuElement.swift in Sources */,
 				CE613ABB21ED94F50066E0F1 /* MenuElementCell.swift in Sources */,
 				EECC070521D7BA01003586B6 /* ItemCell.swift in Sources */,
-				EEB7DAA622027BF400C699E5 /* CustomPin.swift in Sources */,
 				CE6DDFA521EC497E0060D018 /* CollectionViewControllerDelegate.swift in Sources */,
 				EE4ACEF021E94B6D002651C0 /* InfoViewController.swift in Sources */,
 				EE4ACEE821E66C17002651C0 /* Museum.swift in Sources */,
